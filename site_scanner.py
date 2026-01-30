@@ -10,7 +10,7 @@ import sys
 from datetime import datetime
 
 # Configuration
-URL = "http://ynet.co.il"
+URL = "https://www.ynet.co.il"
 SEARCH_WORD = "יש"
 SCAN_INTERVAL_SECONDS = 60  # 1 minute
 
@@ -19,7 +19,12 @@ def fetch_page(url):
     """Fetch the webpage content."""
     try:
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7',
+            'Accept-Encoding': 'gzip, deflate',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
         }
         response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
