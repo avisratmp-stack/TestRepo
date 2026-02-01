@@ -10,8 +10,8 @@ import sys
 from datetime import datetime
 
 # Configuration
-URL = "https://www.ynet.co.il"
-SEARCH_WORD = "יש"
+URL = "https://confluence/spaces/IPAAS/overview"
+SEARCH_WORD = "Yisrealian"
 SCAN_INTERVAL_SECONDS = 60  # 1 minute
 
 
